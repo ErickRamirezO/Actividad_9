@@ -1,18 +1,18 @@
 const express = require('express');
 const app = express();
-const PORT = 3000; // Puedes cambiar el puerto si es necesario
+const PORT = 3000;
 
 // Ruta principal
-app.get('/', (req, res) => {
+app.get('/', (_, res) => {
   res.send('¡Hola, esta es la ruta principal!');
 });
 
 // Ruta secundaria
-app.get('/ruta2', (req, res) => {
+app.get('/ruta2', (_, res) => {
   res.send('¡Bienvenido a la ruta secundaria!');
 });
 
-// Inicia el servidor
+// Iniciar el servidor
 app.listen(PORT, () => {
   console.log(`Servidor en ejecución en el puerto ${PORT}`);
 });
